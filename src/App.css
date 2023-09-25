@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  transition: 1s;
 }
 
 .App-logo {
@@ -35,4 +36,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+th,td{
+  text-align: left;
+}
+.selectBtn{
+  color: rgb(86, 243, 86);
+  border: none;
+  /* background-color: rgb(1, 23, 1); */
+  border-radius: 5px;
+}
+.removeBtn{
+  color: rgb(248, 92, 92);
+  border:none;
+  border-radius: 4px;
+}
+table{
+  border: 2px solid black;
 }
