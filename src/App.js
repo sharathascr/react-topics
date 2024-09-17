@@ -1,16 +1,17 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import Main from './Components/IndianCricketTeamSelection/Main';
-import UseEffectHook from './Components/UseEffectHook';
+import { useContext } from "react";
+import LoginContextProvider, { LoginContext } from "./hooks/UseContextHook";
+import UseEffectHook from "./hooks/UseEffectHook";
+import UseStateHook from "./hooks/UseStateHook";
+import UseRef from "./hooks/UseRef";
+import UseReducerHook from "./hooks/UseReducerHook";
+import { useFetchCustomHook } from "./hooks/UseFetchCustomHook";
 
-
-
-function App() {
-  return (
-    <div className="App">
-      <UseEffectHook/>
-    </div>
-  );
-}
+const App=()=>{
+  const data=useFetchCustomHook('https://jsonplaceholder.typicode.com/users');
+  console.log(data)
+  return <>
+  {data.map((user)=><p>{user.name}</p>)}
+  </>
+};
 
 export default App;
