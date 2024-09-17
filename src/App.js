@@ -5,12 +5,11 @@ import UseStateHook from "./hooks/UseStateHook";
 import UseRef from "./hooks/UseRef";
 import UseReducerHook from "./hooks/UseReducerHook";
 import { useFetchCustomHook } from "./hooks/UseFetchCustomHook";
+import Parent from "./props/Parent";
 
 const App=()=>{
-  const data=useFetchCustomHook('https://jsonplaceholder.typicode.com/users');
-  console.log(data)
   return <>
-  {data.map((user)=><p>{user.name}</p>)}
+  <Parent/>
   </>
 };
 
